@@ -1,3 +1,5 @@
+Tutorial Credit : https://dev.to/myogeshchavan97/build-an-amazing-job-search-app-using-react-42p
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
