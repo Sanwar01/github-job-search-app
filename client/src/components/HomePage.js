@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 import _ from 'lodash';
-import { connect } from 'react-redux';
-import { initiateGetJobs } from '../actions/Jobs';
-import { resetErrors } from '../actions/Errors';
+import {connect} from 'react-redux';
+import {initiateGetJobs} from '../actions/Jobs';
+import {resetErrors} from '../actions/Errors';
 import Header from './Header';
 import Search from './Search';
 import Results from './Results';
@@ -29,8 +29,8 @@ const HomePage = (props) => {
   }, [props.errors]);
 
   const loadJobs = (selection) => {
-    const { dispatch } = props;
-    const { description, location, full_time, page = 1 } = selection;
+    const {dispatch} = props;
+    const {description, location, full_time, page = 1} = selection;
     let isLoadMore = false;
     if (selection.hasOwnProperty('page')) {
       isLoadMore = true;
@@ -38,7 +38,7 @@ const HomePage = (props) => {
     dispatch(resetErrors());
     setIsLoading(true);
     dispatch(
-      initiateGetJobs({ description, location, full_time, page }, isLoadMore)
+      initiateGetJobs({description, location, full_time, page}, isLoadMore)
     )
       .then((response) => {
         if (response && response.jobs.length === 0) {
@@ -66,7 +66,7 @@ const HomePage = (props) => {
   };
 
   const handleLoadMore = () => {
-    loadJobs({ ...selection, page: pageNumber + 1 });
+    loadJobs({...selection, page: pageNumber + 1});
     setPageNumber(pageNumber + 1);
   };
 
@@ -87,14 +87,14 @@ const HomePage = (props) => {
     <JobsContext.Provider value={value}>
       <Loader show={isLoading}>Loading...</Loader>
       <div className={`${page === 'details' && 'hide'}`}>
-        <Header />
-        <Search />
+        <Header/>
+        <Search/>
         {!_.isEmpty(errors) && (
           <div className="errorMsg">
             <p>{errors.error}</p>
           </div>
         )}
-        <Results />
+        <Results/>
         {results.length > 0 && _.isEmpty(errors) && !hideLoadMore && (
           <div
             className="load-more"
@@ -110,7 +110,7 @@ const HomePage = (props) => {
         )}
       </div>
       <div className={`${page === 'home' && 'hide'}`}>
-        {page === 'details' && <JobDetails />}
+        {page === 'details' && <JobDetails/>}
       </div>
     </JobsContext.Provider>
   );

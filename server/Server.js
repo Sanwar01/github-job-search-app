@@ -22,7 +22,9 @@ app.get('/jobs', async (req, res) => {
     }
 
     const query = `https://jobs.github.com/positions.json?description=${description}&location=${location}${full_time}${page}`;
+
     const result = await axios.get(query);
+
     res.send(result.data);
   } catch (error) {
     res.status(400).send('Error while getting list of jobs.Try again later.');
