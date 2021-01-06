@@ -1,7 +1,5 @@
 @import "variables";
 
-$default-padding: 2rem;
-
 * {
   margin: 0;
   padding: 0;
@@ -24,6 +22,10 @@ body {
 
 ul {
   margin-left: 1rem;
+}
+
+svg {
+  color: $primary_color;
 }
 
 .header {
@@ -52,7 +54,7 @@ ul {
   .user {
     display: flex;
 
-    .icon{
+    .icon {
       padding: 8px;
       border-radius: 50%;
       color: white;
@@ -66,21 +68,55 @@ ul {
 }
 
 .search-section {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(90deg, rgba(54, 124, 255, 1) 0%, rgba(72, 191, 247, 1) 100%);
+  border-radius: 15px;
   width: 70%;
+  height: 150px;
   margin: 20px auto;
 
-  input {
-    padding: $default-padding;
-    font-size: 1.5rem;
-  }
+  .search-form {
+    display: flex;
+    justify-content: center;
+    background-color: $background_color;
+    border-radius: 20px;
+    align-items: center;
+    margin: auto;
+    width: 50%;
+    height: 80px;
 
-  .btn-search {
-    font-size: 2.2rem;
-    letter-spacing: 1px;
-    width: 13rem;
-    line-height: 1.5;
-    color: #fff;
-    border: none;
+    .vl {
+      height: 80px;
+    }
+
+    .btn-search {
+      font-size: 18px;
+      letter-spacing: 1px;
+      border-radius: 15px;
+      width: 180px;
+      padding: 20px;
+      line-height: 1.5;
+      background-color: $primary_color !important;
+      color: #fff;
+      border: none;
+      margin: 8px;
+    }
+
+    svg {
+      margin-left: 20px;
+      line-height: 1;
+    }
+
+    input {
+      padding: 25px;
+      font-size: 16px;
+      border: none;
+
+      &::placeholder {
+        color: $icon_color;
+      }
+    }
   }
 }
 
@@ -307,3 +343,15 @@ ul {
 }
 
 // Generic styles
+.vl {
+  border-left: 2px solid $icon_color;
+}
+
+// Override bootstrap styles
+.form-group {
+  margin-bottom: 0;
+
+  .form-control:focus {
+    box-shadow: none;
+  }
+}
