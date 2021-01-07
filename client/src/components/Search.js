@@ -1,7 +1,7 @@
 import React, {useState, useContext} from 'react';
-import {Form, Button, Row, Col} from 'react-bootstrap';
+import {Form} from 'react-bootstrap';
 import JobsContext from '../context/Jobs';
-import {faMapMarkerAlt, faMapPin, faSearch} from "@fortawesome/free-solid-svg-icons";
+import {faMapMarkerAlt, faSearch} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 const Search = () => {
@@ -59,9 +59,9 @@ const Search = () => {
           />
         </Form.Group>
 
-        <Button className="btn-search" type="submit">
+        <button className="btn-search" type="submit">
           Search
-        </Button>
+        </button>
         {/*<div className="filters">*/}
         {/*  <Form.Group controlId="full_time">*/}
         {/*    <Form.Check*/}
