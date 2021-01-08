@@ -101,9 +101,10 @@ svg {
     right: 0;
 
     display: flex;
+    justify-content: center;
     align-items: center;
     margin: auto;
-    width: 60%;
+    width: 70%;
     height: 90px;
 
     background-color: $background_color;
@@ -116,7 +117,7 @@ svg {
     }
 
     .btn-search {
-      position: absolute;
+      //position: absolute;
       right: 10px;
 
       font-size: 18px;
@@ -144,7 +145,7 @@ svg {
     }
 
     input {
-      width: 280px;
+      width: 250px;
       padding: 15px;
       font-size: 16px;
       border: none;
@@ -153,6 +154,22 @@ svg {
         color: $icon_color;
       }
     }
+  }
+}
+
+.full-time-btn {
+  padding: 10px 25px;
+
+  background-color: #F6F7FB;
+  color: $font_color;
+  border-radius: 15px;
+  border: none;
+  transition: all 0.3s ease 0s;
+
+  cursor: pointer;
+
+  &.active {
+    background-color: #D7FFE0;
   }
 }
 
