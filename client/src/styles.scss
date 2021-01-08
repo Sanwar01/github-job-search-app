@@ -104,40 +104,13 @@ svg {
     justify-content: center;
     align-items: center;
     margin: auto;
-    width: 70%;
+    width: 60%;
     height: 90px;
 
     background-color: $background_color;
     border-radius: 18px;
 
     box-shadow: 0 2px 20px 5px #367cff38;
-
-    .vl {
-      height: 100%;
-    }
-
-    .btn-search {
-      //position: absolute;
-      right: 10px;
-
-      font-size: 18px;
-      width: 170px;
-      padding: 17px;
-      border-radius: 15px;
-      line-height: 1.5;
-
-
-      background-color: $primary_color;
-      letter-spacing: 1px;
-      color: #fff;
-      border: none;
-      transition: all 0.3s ease 0s;
-
-      &:hover {
-        background-color: #1464f9;
-        box-shadow: none !important;
-      }
-    }
 
     svg {
       margin-left: 25px;
@@ -154,63 +127,42 @@ svg {
         color: $icon_color;
       }
     }
-  }
-}
 
-.full-time-btn {
-  padding: 10px 25px;
-
-  background-color: #F6F7FB;
-  color: $font_color;
-  border-radius: 15px;
-  border: none;
-  transition: all 0.3s ease 0s;
-
-  cursor: pointer;
-
-  &.active {
-    background-color: #D7FFE0;
-  }
-}
-
-.filters {
-  display: flex;
-  width: 70%;
-
-  .filter-btn {
-    margin: 2rem 2rem 2rem 0;
-    padding: 1rem;
-    display: block;
-    border: 1px solid #888;
-    border-radius: 25px;
-    cursor: pointer;
-  }
-
-  .active {
-    background: #0069d9;
-    color: #fff;
-  }
-
-  .full-time-checkbox {
-    input {
-      margin-top: 0.5rem;
+    .vl {
+      height: 100%;
     }
 
-    label {
-      margin-left: 1rem;
+    .btn-search {
+      font-size: 18px;
+      width: 170px;
+      padding: 20px;
+      border-radius: 15px;
+      line-height: 1.5;
+
+      background-color: $primary_color;
+      letter-spacing: 1px;
+      color: #fff;
+      border: none;
+      transition: all 0.3s ease 0s;
+
+      &:hover {
+        background-color: #1464f9;
+        box-shadow: none !important;
+      }
     }
   }
 }
 
 .search-results {
-  width: 90%;
-  margin: 0 auto;
+  width: 70%;
+  margin: 150px auto;
 
   .job-item {
     display: flex;
-    padding: 1rem;
-    border: 1px solid #000;
-    border-radius: 0.5rem;
+    flex-direction: row;
+
+    padding: 2rem;
+    border-bottom: 1px solid #F3F4F7;
     margin: 2rem;
     cursor: pointer;
 
@@ -219,20 +171,37 @@ svg {
     }
 
     &:hover {
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+      box-shadow: 0 0 10px rgba(50, 50, 50, 0.4);
     }
 
     .job-info {
+      display: flex;
+      flex-direction: column;
+      color: $icon_color;
+
       .job-title {
+        color: $font-color;
+        font-size: 2rem;
         margin-bottom: 2rem;
+      }
+
+      .company-name,
+      .job-location {
+        margin-right: 2rem;
+        font-size: 12px;
+      }
+
+      svg {
+        color: $icon_color;
+        margin: 0 2px;
       }
     }
 
     .company-logo {
       img {
-        max-width: 10rem;
-        height: 10rem;
-        border-radius: 50%;
+        max-width: 7rem;
+        height: 7rem;
+        border-radius: 20%;
       }
     }
 
@@ -240,10 +209,38 @@ svg {
       flex: 1;
     }
 
+
     .post-info {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
+
+      color: $icon_color;
+      font-size: 12px;
+
+      svg {
+        color: $icon_color;
+        margin-right: 5px;
+      }
+
+      .job-type {
+        padding: 5px 10px;
+        margin-bottom: 10px;
+
+        font-weight: bold;
+        background-color: #D7FFE0;
+        color: $font_color;
+        border-radius: 15px;
+        border: none;
+
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+      }
+
+      .post-time {
+        margin-right: 50px;
+      }
     }
   }
 }
@@ -291,8 +288,7 @@ svg {
 
     .left-section {
       flex: 2;
-      margin: 0;
-      margin-right: 2rem;
+      margin: 0 2rem 0 0;
     }
 
     .right-section {
@@ -336,7 +332,7 @@ svg {
 .loading {
   font-size: 2rem;
   text-align: center;
-  color: #fff;
+  color: $primary_color;
 }
 
 .disabled {

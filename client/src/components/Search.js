@@ -65,13 +65,6 @@ const Search = () => {
             />
           </Form.Group>
 
-          <div
-            className={state.full_time ? "full-time-btn active" : "full-time-btn"}
-            name="full_time"
-            onClick={handleFullTimeBtnClick}>
-            Full Time
-          </div>
-
           <button className="btn-search" type="submit">
             Search
           </button>
