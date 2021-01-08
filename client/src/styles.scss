@@ -68,38 +68,68 @@ svg {
 }
 
 .search-section {
+  position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   background: linear-gradient(90deg, rgba(54, 124, 255, 1) 0%, rgba(72, 191, 247, 1) 100%);
   border-radius: 15px;
   width: 70%;
-  height: 150px;
+  height: 250px;
   margin: 20px auto;
 
+  .title {
+    margin: 30px auto;
+    padding: 10px;
+    color: #ffffff;
+
+    h1 {
+      font-size: 3em;
+    }
+
+    h3 {
+      font-weight: 200;
+      text-align: center;
+      font-size: 1.5em;
+    }
+  }
+
   .search-form {
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    right: 0;
+
     display: flex;
-    background-color: $background_color;
-    border-radius: 20px;
     align-items: center;
     margin: auto;
     width: 60%;
-    height: 80px;
+    height: 90px;
+
+    background-color: $background_color;
+    border-radius: 18px;
+
+    box-shadow: 0 2px 20px 5px #367cff38;
 
     .vl {
-      height: 80px;
+      height: 100%;
     }
 
     .btn-search {
+      position: absolute;
+      right: 10px;
+
       font-size: 18px;
-      letter-spacing: 1px;
+      width: 170px;
+      padding: 17px;
       border-radius: 15px;
-      width: 180px;
-      padding: 20px;
       line-height: 1.5;
+
+
       background-color: $primary_color;
+      letter-spacing: 1px;
       color: #fff;
       border: none;
-      margin: 8px 8px 8px 20px;
       transition: all 0.3s ease 0s;
 
       &:hover {
@@ -109,13 +139,13 @@ svg {
     }
 
     svg {
-      margin-left: 30px;
+      margin-left: 25px;
       line-height: 1;
     }
 
     input {
-      width: 250px;
-      padding: 25px;
+      width: 280px;
+      padding: 15px;
       font-size: 16px;
       border: none;
 

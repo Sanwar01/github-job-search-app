@@ -36,8 +36,14 @@ const Search = () => {
 
   return (
     <div className="search-section">
+
+      <div className="title">
+        <h1>Search for your dream job</h1>
+        <h3>Finding your new job just got easier</h3>
+      </div>
+
       <Form className="search-form" onSubmit={handleSearch}>
-        <FontAwesomeIcon className="icon" icon={faSearch} size="lg"/>
+        <FontAwesomeIcon id="search-icon" icon={faSearch} fixedWidth/>
         <Form.Group controlId="description">
           <Form.Control
             type="text"
@@ -48,7 +54,7 @@ const Search = () => {
           />
         </Form.Group>
         <div className="vl"/>
-        <FontAwesomeIcon icon={faMapMarkerAlt} size="lg"/>
+        <FontAwesomeIcon id="location-icon"  icon={faMapMarkerAlt} fixedWidth/>
         <Form.Group controlId="location">
           <Form.Control
             type="text"
