@@ -50,7 +50,7 @@ const JobItem = (props) => {
         </div>
         <div className="post-time">
           <FontAwesomeIcon id="calendar-icon" icon={faCalendar} fixedWidth/>
-          {moment(new Date(created_at)).format('Do MMMM YYYY')}
+          Posted {moment(new Date(created_at)).fromNow()}
         </div>
       </div>
     </div>
